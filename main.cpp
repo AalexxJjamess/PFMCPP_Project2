@@ -16,12 +16,12 @@ video: Chapter 2 - Part 3
  
  1) Write down the names of all of the primitives available in C++ (excluding wchar_t) here: 
  
- 
- 
- 
- 
- 
- 
+ int
+ char
+ double
+ float
+ long
+ void
  
  
  
@@ -56,10 +56,41 @@ void variableDeclarations()
 {
     //example:
     int number = 2; //declaration of a primitive named 'number' with an initial value of '2'
+    int number1 = 3;
+    int number2 = 4;
+
+    char chr = 'a';
+    char chr1 = 'b';
+    char chr2 = 'c'; 
+
+    double dNumber = 5.0;
+    double dNumber1 = 6.0;
+    double dNumber2 = 7.0; 
     
-    
-    
-    ignoreUnused(number); //passing each variable declared to the ignoreUnused() function
+    float fl = 8.0;
+    float fl1 = 9.0;
+    float fl2 = 10.0; 
+
+    long ld = 8.0;
+    long ld1 = 9.0;
+    long ld2 = 10.0; 
+ 
+    ignoreUnused(number);
+    ignoreUnused(number1);
+    ignoreUnused(number2);
+    ignoreUnused(chr);
+    ignoreUnused(chr1);
+    ignoreUnused(chr2);
+    ignoreUnused(dNumber);
+    ignoreUnused(dNumber1);
+    ignoreUnused(dNumber2);
+    ignoreUnused(fl);
+    ignoreUnused(fl1);
+    ignoreUnused(fl2);
+    ignoreUnused(ld);
+    ignoreUnused(ld1);
+    ignoreUnused(ld2);
+     //passing each variable declared to the ignoreUnused() function
 }
 /*
  10 functions
@@ -74,43 +105,79 @@ bool rentACar(int rentalDuration, int carType = 0)  //function declaration with 
 /*
  1)
  */
-
+int addTwoNumbers(int a, int b)
+{
+    ignoreUnused(a, b);
+    return {};
+}
 /*
  2)
  */
-
+char numToASCII(int num)
+{
+    ignoreUnused(num);
+    return {};
+}
 /*
  3)
  */
-
+bool checkIfEqual(int a, int b)
+{
+    ignoreUnused(a, b);
+    return {};
+}
 /*
  4)
  */
-
+void walk(int numStepsX, int numStepsY)
+{
+    ignoreUnused(numStepsX, numStepsY);
+}
 /*
  5)
  */
-
+bool characterMatch(char a, char b)
+{
+    ignoreUnused(a, b);
+    return {};
+}
 /*
  6)
  */
-
+long findHighestNumber(long a, long b)
+{
+    ignoreUnused(a, b);
+    return {};
+}
 /*
  7)
  */
+void makeSound(int volume, int pitch)
+{
+    ignoreUnused(volume, pitch);
+}
 
 /*
  8)
  */
-
+int counter(int increment, int limit, int start)
+{
+    ignoreUnused(increment, limit, start);
+}
 /*
  9)
  */
-
+long findLowestNumber(long a, long b, long c, long d)
+{
+    ignoreUnused(a, b, c, d);
+}
 /*
  10)
  */
-
+void writeToScreen(char chrToWrite, int fontSize)
+{
+    ignoreUnused(chrToWrite, fontSize);
+}
 /*
  MAKE SURE YOU ARE NOT ON THE MASTER BRANCH
 
