@@ -144,7 +144,7 @@ bool characterMatch(char a, char b)
 /*
  6)
  */
-long findHighestNumber(long a, long b)
+double findHighestNumber(double a, double b)
 {
     ignoreUnused(a, b);
     return {};
@@ -163,6 +163,7 @@ void makeSound(int volume, int pitch)
 int counter(int increment, int limit, int start)
 {
     ignoreUnused(increment, limit, start);
+    return {};
 }
 /*
  9)
@@ -170,6 +171,7 @@ int counter(int increment, int limit, int start)
 long findLowestNumber(long a, long b, long c, long d)
 {
     ignoreUnused(a, b, c, d);
+    return {};
 }
 /*
  10)
@@ -198,27 +200,34 @@ int main()
     auto carRented = rentACar(6, 2); 
     
     //1)
-    
+    int result = addTwoNumbers(1,5);
     //2)
-    
+    char asciiChr = numToASCII(97);
     //3)
-    
+    bool check = checkIfEqual(1, 1);
     //4)
-    
+    walk(10,15);
     //5)
-    
+    bool checkMatch = characterMatch('z', 'a');
     //6)
-    
+    double highNum = findHighestNumber(10.21, 894.1);
     //7)
-    
+    makeSound(100, 440);
     //8)
-    
+    int counterResult = counter(5, 100, 0);
     //9)
-    
+    long lowNum = findLowestNumber(100000, 237242873, 666, 5972);
     //10)
-    
+    writeToScreen('g', 15);
     
     ignoreUnused(carRented);
+    ignoreUnused(result);
+    ignoreUnused(asciiChr);
+    ignoreUnused(check);
+    ignoreUnused(checkMatch);
+    ignoreUnused(highNum);
+    ignoreUnused(counterResult);
+    ignoreUnused(lowNum);
     std::cout << "good to go!" << std::endl;
     return 0;    
 }
