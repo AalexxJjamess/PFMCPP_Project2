@@ -22,6 +22,7 @@ video: Chapter 2 - Part 3
  float
  long
  void
+ bool
  
  
  
@@ -74,22 +75,12 @@ void variableDeclarations()
     long ld = 8.0;
     long ld1 = 9.0;
     long ld2 = 10.0; 
+
+    bool tf = true;
+    bool tf1 = false;
+    bool tf2 = false;
  
-    ignoreUnused(number);
-    ignoreUnused(number1);
-    ignoreUnused(number2);
-    ignoreUnused(chr);
-    ignoreUnused(chr1);
-    ignoreUnused(chr2);
-    ignoreUnused(dNumber);
-    ignoreUnused(dNumber1);
-    ignoreUnused(dNumber2);
-    ignoreUnused(fl);
-    ignoreUnused(fl1);
-    ignoreUnused(fl2);
-    ignoreUnused(ld);
-    ignoreUnused(ld1);
-    ignoreUnused(ld2);
+    ignoreUnused(number, number1, number2, chr, chr1, chr2, dNumber, dNumber1, dNumber2, fl, fl1, fl2, ld, ld1, ld2, tf, tf1, tf2);
      //passing each variable declared to the ignoreUnused() function
 }
 /*
@@ -220,14 +211,7 @@ int main()
     //10)
     writeToScreen('g', 15);
     
-    ignoreUnused(carRented);
-    ignoreUnused(result);
-    ignoreUnused(asciiChr);
-    ignoreUnused(check);
-    ignoreUnused(checkMatch);
-    ignoreUnused(highNum);
-    ignoreUnused(counterResult);
-    ignoreUnused(lowNum);
+    ignoreUnused(carRented, result, asciiChr, check, checkMatch, highNum, counterResult, lowNum);
     std::cout << "good to go!" << std::endl;
     return 0;    
 }
