@@ -188,6 +188,31 @@ void writeToScreen(char chrToWrite, int fontSize)
 int main()
 {
     //example of calling that function, storing the value, and passing it to ignoreUnused at the end of main()
+    auto carRented = rentACar(6, 2); 
+    
+    //1)
+    int result = addTwoNumbers(1,5);
+    //2)
+    char asciiChr = numToASCII(97);
+    //3)
+    bool check = checkIfEqual(1, 1);
+    //4)
+    walk(10,15);
+    //5)
+    bool checkMatch = characterMatch('z', 'a');
+    //6)
+    double highNum = findHighestNumber(10.21, 894.1);
+    //7)
+    makeSound(100, 440);
+    //8)
+    int counterResult = counter(5, 100, 0);
+    //9)
+    long lowNum = findLowestNumber(100000, 237242873, 666, 5972);
+    //10)
+    writeToScreen('g', 15);
+    
+    ignoreUnused(carRented, result, asciiChr, check, checkMatch, highNum, counterResult, lowNum);
+    std::cout << "good to go!" << std::endl;
     
     return 0;    
 }
