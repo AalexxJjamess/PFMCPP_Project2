@@ -16,12 +16,13 @@ video: Chapter 2 - Part 3
  
  1) Write down the names of all of the primitives available in C++ (excluding wchar_t) here: 
  
- 
- 
- 
- 
- 
- 
+ int
+ char
+ double
+ float
+ long
+ void
+ bool
  
  
  
@@ -56,10 +57,31 @@ void variableDeclarations()
 {
     //example:
     int number = 2; //declaration of a primitive named 'number' with an initial value of '2'
+    int number1 = 3;
+    int number2 = 4;
+
+    char chr = 'a';
+    char chr1 = 'b';
+    char chr2 = 'c'; 
+
+    double dNumber = 5.0;
+    double dNumber1 = 6.0;
+    double dNumber2 = 7.0; 
     
-    
-    
-    ignoreUnused(number); //passing each variable declared to the ignoreUnused() function
+    float fl = 8.0f;
+    float fl1 = 9.0f;
+    float fl2 = 10.0f; 
+
+    long ld = 8.0;
+    long ld1 = 9.0;
+    long ld2 = 10.0; 
+
+    bool tf = true;
+    bool tf1 = false;
+    bool tf2 = false;
+ 
+    ignoreUnused(number, number1, number2, chr, chr1, chr2, dNumber, dNumber1, dNumber2, fl, fl1, fl2, ld, ld1, ld2, tf, tf1, tf2);
+     //passing each variable declared to the ignoreUnused() function
 }
 /*
  10 functions
@@ -74,43 +96,81 @@ bool rentACar(int rentalDuration, int carType = 0)  //function declaration with 
 /*
  1)
  */
-
+int addTwoNumbers(int a, int b)
+{
+    ignoreUnused(a, b);
+    return {};
+}
 /*
  2)
  */
-
+char numToASCII(int num)
+{
+    ignoreUnused(num);
+    return {};
+}
 /*
  3)
  */
-
+bool checkIfEqual(int a, int b)
+{
+    ignoreUnused(a, b);
+    return {};
+}
 /*
  4)
  */
-
+void walk(int numStepsX, int numStepsY, int speed = 100)
+{
+    ignoreUnused(numStepsX, numStepsY, speed);
+}
 /*
  5)
  */
-
+bool characterMatch(char a, char b, char c = 'c')
+{
+    ignoreUnused(a, b, c);
+    return {};
+}
 /*
  6)
  */
-
+double findHighestNumber(double a, double b)
+{
+    ignoreUnused(a, b);
+    return {};
+}
 /*
  7)
  */
+void makeSound(int volume, int pitch)
+{
+    ignoreUnused(volume, pitch);
+}
 
 /*
  8)
  */
-
+int counter(int increment, int limit, int start)
+{
+    ignoreUnused(increment, limit, start);
+    return {};
+}
 /*
  9)
  */
-
+long findLowestNumber(long a, long b, long c, long d, long e = 100000000)
+{
+    ignoreUnused(a, b, c, d);
+    return {};
+}
 /*
  10)
  */
-
+void writeToScreen(char chrToWrite, int fontSize)
+{
+    ignoreUnused(chrToWrite, fontSize);
+}
 /*
  MAKE SURE YOU ARE NOT ON THE MASTER BRANCH
 
@@ -131,27 +191,28 @@ int main()
     auto carRented = rentACar(6, 2); 
     
     //1)
-    
+    int result = addTwoNumbers(1,5);
     //2)
-    
+    char asciiChr = numToASCII(97);
     //3)
-    
+    bool check = checkIfEqual(1, 1);
     //4)
-    
+    walk(10,15);
     //5)
-    
+    bool checkMatch = characterMatch('z', 'a');
     //6)
-    
+    double highNum = findHighestNumber(10.21, 894.1);
     //7)
-    
+    makeSound(100, 440);
     //8)
-    
+    int counterResult = counter(5, 100, 0);
     //9)
-    
+    long lowNum = findLowestNumber(100000, 237242873, 666, 5972);
     //10)
+    writeToScreen('g', 15);
     
-    
-    ignoreUnused(carRented);
+    ignoreUnused(carRented, result, asciiChr, check, checkMatch, highNum, counterResult, lowNum);
     std::cout << "good to go!" << std::endl;
+
     return 0;    
 }
