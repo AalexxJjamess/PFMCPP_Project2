@@ -68,9 +68,9 @@ void variableDeclarations()
     double dNumber1 = 6.0;
     double dNumber2 = 7.0; 
     
-    float fl = 8.0;
-    float fl1 = 9.0;
-    float fl2 = 10.0; 
+    float fl = 8.0f;
+    float fl1 = 9.0f;
+    float fl2 = 10.0f; 
 
     long ld = 8.0;
     long ld1 = 9.0;
@@ -120,16 +120,16 @@ bool checkIfEqual(int a, int b)
 /*
  4)
  */
-void walk(int numStepsX, int numStepsY)
+void walk(int numStepsX, int numStepsY, int speed = 100)
 {
-    ignoreUnused(numStepsX, numStepsY);
+    ignoreUnused(numStepsX, numStepsY, speed);
 }
 /*
  5)
  */
-bool characterMatch(char a, char b)
+bool characterMatch(char a, char b, char c = 'c')
 {
-    ignoreUnused(a, b);
+    ignoreUnused(a, b, c);
     return {};
 }
 /*
@@ -159,7 +159,7 @@ int counter(int increment, int limit, int start)
 /*
  9)
  */
-long findLowestNumber(long a, long b, long c, long d)
+long findLowestNumber(long a, long b, long c, long d, long e = 100000000)
 {
     ignoreUnused(a, b, c, d);
     return {};
@@ -213,6 +213,6 @@ int main()
     
     ignoreUnused(carRented, result, asciiChr, check, checkMatch, highNum, counterResult, lowNum);
     std::cout << "good to go!" << std::endl;
-    
+
     return 0;    
 }
